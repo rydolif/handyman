@@ -1,19 +1,31 @@
 .modal
 	position: relative
-	max-width: 725px
+	max-width: 525px
 	width: 100%
 	height: auto
-	padding: 60px 75px 145px
+	padding: 60px
 	margin: 20px 0
-	background-color: #fff
+	background-color: $light
 	z-index: 1
-	box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
-	border-radius: 20px
-	border: 10px solid #273a72
+	box-shadow: 0 0 15px 0 rgba(#000, .3)
+	border-radius: 30px
 
-	h3
-		justify-content: flex-start
-		margin-bottom: 50px
+	+r(767)
+		padding: 30px
+
+	+r(480)
+		padding: 30px 15px
+
+	h2
+		margin-bottom: 20px
+		text-align: center
+
+	button
+		width: 100%
+		max-width: 100%
+	
+	input
+		margin-bottom: 20px
 
 	&__close
 		position: absolute
@@ -27,6 +39,13 @@
 		cursor: pointer
 		transition: all .6s
 		background-color: #fff
+		box-shadow: 0 0 10px 0 rgba(#000, .3)
+
+		+r(767)
+			top: 10px
+			right: 10px
+			width: 30px
+			height: 30px
 
 		&:hover,
 		&:focus
@@ -46,6 +65,9 @@
 			border-radius: 4px
 			height: 22px
 			width: 3px
+
+			+r(767)
+				height: 18px
 
 			&:first-child
 				transform: translate(-50%, -50%) rotate(45deg)

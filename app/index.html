@@ -33,7 +33,7 @@
 					<li><a href="#">Объекты</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
-				<a href="#" class="header__btn btn">Оставить заявку</a>
+				<a href="#" class="order_open header__btn btn">Оставить заявку</a>
 			</nav>
 
 			<div class="header__phone">
@@ -41,7 +41,7 @@
 				<p><a href="tel:+74994997041">+7 (499) 499-70-41</a> - Санкт-Петербург</p>
 			</div>
 
-			<a href="#" class="header__btn btn">Оставить заявку</a>
+			<a href="#" class="order_open header__btn btn">Оставить заявку</a>
 
 		</div>
 	</header>
@@ -80,7 +80,6 @@
 
 	<section class="work">
 		<div class="work__container container">
-
 
 			<div class="work__text">
 				<p>
@@ -446,14 +445,15 @@
 	</footer>
 
 	<div class="modal" id="order">
+
+		<a href="#" class="modal__close order_close" type="button">
+			<span></span>
+			<span></span>
+		</a>
+
 		<form action="sendmail.php" class="form" method="post">
 
-			<button class="close order_close" type="button">
-				<span></span>
-				<span></span>
-			</button>
-
-			<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+			<h2>Оставьте заявку, <br>мы свяжемся с Вами</h2>
 			<input type="hidden" name="subject" value="Узнать подробнее!">
 
 			<div class="">
@@ -466,15 +466,6 @@
 				<button type="submit" class="btn" name="submit">Отправить</button>
 			</div>
 		</form>
-	</div>
-
-	<div class="modal" id="thanks">
-		<button class="close thanks_close" type="button">
-			<span></span>
-			<span></span>
-		</button>
-		<h3>Спасибо за доверие!</h3>
-		<p>Мы обязательно с вами свяжемся!</p>
 	</div>
 
 	<script src="js/scripts.min.js"></script>

@@ -37,7 +37,7 @@
 
 	&__container
 		+between
-		padding: 0 30px 
+		padding: 0 30px
 
 		+r(1400)
 			padding: 0 15px
@@ -61,7 +61,6 @@
 	&__nav
 		text-transform: uppercase
 		transition: all .6s
-		padding-bottom: 20px
 
 		ul
 			display: flex
@@ -76,13 +75,13 @@
 			&:last-child
 				margin-right: 0
 
-		a
-			text-transform: uppercase
-			color: #ffffff
+			a
+				text-transform: uppercase
+				color: #ffffff
 
-			&:hover,
-			&:focus
-				color: $accent
+				&:hover,
+				&:focus
+					color: $accent
 
 		+r(767)
 			position: fixed
@@ -91,6 +90,7 @@
 			right: 0
 			background-color: #323232
 			border-top: 1px solid $bg
+			padding-bottom: 20px
 
 			ul
 				padding: 20px
@@ -828,6 +828,7 @@
 					width: 100%
 					max-width: 320px
 					margin: 0 auto 5px
+					padding: 5px
 
 			.btn
 				max-width: 100%
@@ -896,6 +897,9 @@
 				margin-right: 0
 				margin-bottom: 5px
 
+	&__mail
+		align-items: center
+
 	&__soc
 		display: flex
 
@@ -928,5 +932,155 @@
 			text-align: center
 			width: 100%
 			margin-bottom: 10px
+
+
+.services
+	padding-top: 125px
+	background-color: #fff
+
+	+r(767)
+		padding-top: 70px
+
+	h2
+		margin-bottom: 30px
+
+	&__wrap
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		padding: 30px
+		border-radius: 30px
+		background-color: $light
+		box-shadow: 0 0 15px 0 rgba(#000, .3)
+
+		+r(1200)
+			padding: 20px
+		
+		+r(480)
+			padding: 10px
+
+	&__list
+		width: 32.5%
+
+		+r(992)
+			width: 42%
+
+		+r(578)
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			margin-bottom: 15px
+
+		li
+			margin-bottom: 5px
+
+			&:last-child
+				margin-bottom: 0
+
+			+r(578)
+				width: 49%
+			
+			+r(480)
+				width: 100%
+
+		a
+			position: relative
+			display: flex
+			align-items: center
+			border-radius: 30px
+			padding: 15px 40px 15px 25px
+			font-family: $title
+			font-weight: 700
+			color: $text
+
+			+r(1200)
+				font-size: 14px
+
+			+r(992)
+				padding: 10px 20px 10px 15px
+			
+			+r(480)
+				padding: 5px
+
+			&::before
+				+transition
+				content: ''
+				position: absolute
+				right: 15px
+				top: 50%
+				transform: translate(0, -50%)
+				width: 0
+				height: 0
+				border-top: 6px solid transparent
+				border-bottom: 6px solid transparent
+				border-left: 8px solid $accent
+				border-right: 8px solid transparent
+				opacity: 0
+
+				+r(767)
+					display: none
+
+		.active
+			background-color: #ffffff
+
+			&::before
+				opacity: 1
+
+		img
+			width: 35px
+			height: 35px
+			margin-right: 25px
+
+			+r(1200)
+				margin-right: 15px
+
+			+r(992)
+				width: 25px
+				height: 25px
+				margin-right: 10px
+
+	&__content
+		width: 66%
+		background-color: #ffffff
+		border-radius: 30px
+		padding: 40px 40px 40px 70px
+		border-top: 1px solid #eeeeee
+		border-left: 1px solid #eeeeee
+
+		+r(1200)
+			padding: 30px
+
+		+r(992)
+			width: 56%
+			padding: 15px
+
+		+r(578)
+			width: 100%
+
+		+r(480)
+			padding: 10px
+
+		p
+			margin-bottom: 25px
+
+			+r(1200)
+				margin-bottom: 10px
+
+			&:last-child
+				margin-bottom: 0
+
+		&_btn
+			display: flex
+			justify-content: center
+			margin-top: 60px
+
+			+r(1200)
+				margin-top: 40px
+
+			+r(480)
+				margin-top: 20px
+
+
 
 @import "page"
